@@ -1,0 +1,14 @@
+name: CI workflow
+#creacion de eventos en o triggers cuando afecte las ramas main en pull request
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+#Aqui colocamos cada uno de los pasos para realizar van en sequiencia   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
+
+ 
